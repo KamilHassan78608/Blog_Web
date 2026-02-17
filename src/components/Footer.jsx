@@ -7,8 +7,7 @@ const Footer = () => {
     const { darkMode, setdarkMode } = useContext(AppContext);
 
   return (
-    <div className={`w-full shadow-2xl shadow-gray-500 ${darkMode ? "bg-gray-900 text-gray-400" : "bg-gray-100 text-gray-600"}`}>
-
+    <div className={`w-full shadow-2xl ${darkMode ? "bg-gray-900 text-gray-400 shadow-gray-950" : "bg-gray-100 text-gray-600 shadow-gray-400"}`}>
       
       {/* Upper section */}
       <div className='relative max-w-7xl mx-auto p-6 grid grid-cols-1 md:grid-cols-4 gap-10'>

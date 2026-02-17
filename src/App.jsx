@@ -2,16 +2,24 @@ import React from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from './layout/layout'
+import Home from './pages/Home'
+import Fallowing from './pages/Fallowing'
 
 const App = () => {
   return (
-    <div className='flex flex-col min-h-screen'>
-      <Navbar />
-      <main className='flex-1'>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Layout />}>
 
-      </main>
-      <Footer />
-    </div>
+        {/* Routes */}
+        <Route index element={<Home />} />
+        <Route path='/fallowing' element={<Fallowing />} />
+
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

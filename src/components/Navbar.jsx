@@ -6,13 +6,13 @@ const Navbar = () => {
 
     const { darkMode, setdarkMode } = useContext(AppContext);
 
-    const [isOpen, setisOpen] = useState(true);
+    const [isOpen, setisOpen] = useState(false);
 
     const NavItems = ["Journal", "Fallowing", "Favorite", "Dashboard"];
     const [selectedNav, setselectedNav] = useState(NavItems[0]);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 shadow-2xl shadow-gray-500 ${darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"} `}>
+    <header className={`fixed top-0 left-0 right-0 z-50 shadow-2xl ${darkMode ? "bg-gray-900 text-white shadow-gray-950" : "bg-gray-100 text-gray-900 shadow-gray-400"} `}>
       <div className="relative max-w-7xl mx-auto px-6 h-20 flex items-center">
         
         {/* Logo */}
